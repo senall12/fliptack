@@ -1,0 +1,212 @@
+/* =====================================================
+   RESET & GLOBAL
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background-color: #fde4ec;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   WARNA UTAMA (TPACK – RAMAH SD)
+===================================================== */
+:root {
+  --pink-main: #f8b6c8;
+  --pink-soft: #fde4ec;
+  --pink-dark: #d6336c;
+  --white: #ffffff;
+  --shadow-soft: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* =====================================================
+   HALAMAN UTAMA / COVER
+===================================================== */
+.cover-page {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--pink-main);
+  background-image: url("cover-fliptack.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* UTUH, TIDAK TERPOTONG */
+
+  position: relative;
+}
+
+/* Tombol Next – Seperti Membuka Buku */
+.next-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.next-button a {
+  text-decoration: none;
+  background-color: var(--white);
+  color: var(--pink-dark);
+
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.next-button a:hover {
+  background-color: var(--pink-dark);
+  color: var(--white);
+  transform: translateX(6px);
+}
+
+/* =====================================================
+   HALAMAN UMUM (PANDUAN, JUDUL, PERTEMUAN)
+===================================================== */
+.page {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--pink-soft);
+}
+
+/* Card Utama */
+.card {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 20px;
+}
+
+/* Judul Besar */
+.title {
+  text-align: center;
+  color: var(--pink-dark);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Paragraf */
+.text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* =====================================================
+   TOMBOL UMUM
+===================================================== */
+.button {
+  display: inline-block;
+  text-decoration: none;
+
+  background-color: var(--pink-dark);
+  color: var(--white);
+
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow: var(--shadow-soft);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #b82a58;
+}
+
+/* Tombol Tengah */
+.center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* =====================================================
+   MENU PERTEMUAN (1, 2, 3)
+===================================================== */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu a {
+  text-decoration: none;
+  background-color: var(--white);
+  color: var(--pink-dark);
+
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 600;
+
+  box-shadow: var(--shadow-soft);
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: var(--pink-main);
+  color: var(--white);
+}
+
+/* =====================================================
+   SUB MENU KEGIATAN
+===================================================== */
+.sub-menu {
+  margin-top: 12px;
+}
+
+.sub-menu a {
+  display: block;
+  text-decoration: none;
+
+  background-color: var(--pink-soft);
+  color: #333;
+
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+}
+
+.sub-menu a:hover {
+  background-color: var(--pink-main);
+  color: var(--white);
+}
+
+/* =====================================================
+   RESPONSIVE DESKTOP (OPSIONAL)
+===================================================== */
+@media (min-width: 768px) {
+
+  .page {
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .menu {
+    flex-direction: row;
+  }
+
+  .menu a {
+    flex: 1;
+  }
+}
